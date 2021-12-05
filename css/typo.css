@@ -52,6 +52,7 @@ table {
 /* 去除默认边框 */
 fieldset, img {
   border: 0;
+  width: 100%;
 }
 
 /* 块/段落引用 */
