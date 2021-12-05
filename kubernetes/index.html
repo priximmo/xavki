@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Awesome Presentation</title>
+    <title>Kubernetes - 0 to Hero</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="../css/quasar.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/pure-min.css" />
@@ -56,7 +56,7 @@ background-image:url(../img/kubisme.png)
 .st.noborder.st-hline.font-lg.mb-xs[
 | Part | Title |
 | ---- | ---- |	
-| [1](https://priximmo.github.io/xavki/kubernetes/#3) | Introduction : What are kubernetes and containerization ?  |
+| [1](https://priximmo.github.io/xavki/kubernetes/#3) | Introduction : What are kubernetes and the containerization ?  |
 | 2 | Architecture and Concepts  |
 ]
 
@@ -102,10 +102,15 @@ background-image:url(../img/kubisme.png)
 
 ## Why would you use containers ?
 
+
+
 - To deliver your applications or services
 
 --
-- To remove dependancies
+- To remove dependencies
+
+--
+- To store a global image (libs/apps)
 
 --
 - To improve your deployments
@@ -125,6 +130,44 @@ background-image:url(../img/kubisme.png)
 --
 - To be fashionable... Bad answer !!!
 
+--
+- To adopt a devops practice... Good !!!
+
+---
+
+<small>Introduction : What are kubernetes and containerization ?</small>
+
+## What's a container ?
+
+
+- Just a process (main process vs sub-process) on the Host OS
+
+- Uses namepaces and cgroups to isolate process : resources (memory, cpu), security...
+
+- Uses an image that is an inert container (process not running)
+
+- Is an instance of a service/app 
+
+- You share/store an image and you run a container
+
+
+---
+
+<small>Introduction : What are kubernetes and containerization ?</small>
+
+## What's a Container Runtime ?
+
+- Container Runtine allows you to run a container
+
+- It's an engine that allows you to set cgroups and namespaces...
+
+- Two levels : low and high
+
+- RunC is a low level CR
+
+- Docker or ContainerD are a high level (they use RunC)
+
+- Others CR : CRI-O, LXC, Kata-Container...
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
