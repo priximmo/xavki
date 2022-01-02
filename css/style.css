@@ -292,6 +292,7 @@ pre {
 .nord-dark .st table tr {
   color: var(--nord6);
   opacity: 0.9;
+  text-align: left;
 }
 
 .nord-dark .st table th,
