@@ -137,7 +137,6 @@ background-image:url(../img/microme.png)
 ## Sketch of our infrastructure
 
 .mermaid[
-<pre>
 graph TD;
     SCRIPT/API-->ELS;
     ELS-->ScraperVideos;
@@ -148,7 +147,6 @@ graph TD;
     ScraperComments-->RabbitMq;
     RabbitMq-->InserterComments;
     InserterComments-->ELS;
-</pre>
 ]
 
     </textarea>
