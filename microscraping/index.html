@@ -137,17 +137,24 @@ background-image:url(../img/microme.png)
 ## Sketch of our infrastructure
 
 .mermaid[
-graph TD;
-    SCRIPT/API-->ELS;
-    ELS-->ScraperVideos;
-    ScraperVideos-->RabbitMq;
-    RabbitMq-->InserterVideos;
-    InserterVideos-->ELS;
-    ELS-->ScraperComments;
-    ScraperComments-->RabbitMq;
-    RabbitMq-->InserterComments;
-    InserterComments-->ELS;
+<pre>
+  classDiagram
+  Class01 <|-- AveryLongClass : Cool
+  Class03 *-- Class04
+  Class05 o-- Class06
+  Class07 .. Class08
+  Class09 --> C2 : Where am i?
+  Class09 --* C3
+  Class09 --|> Class07
+  Class07 : equals()
+  Class07 : Object[] elementData
+  Class01 : size()
+  Class01 : int chimp
+  Class01 : int gorilla
+  Class08 <--> C2: Cool label
+</pre>
 ]
+
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
