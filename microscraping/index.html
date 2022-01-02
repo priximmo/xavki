@@ -91,20 +91,65 @@ background-image:url(../img/microme.png)
 ## Why ?
 
 --
-- To learn how provision ?
+- To learn how provision ? (many iterations from 0)
 
 --
--  
+- To install and understand some background softwares
 
+--
+- To discover python and some librairies like selenium
 
+--
+- To discuss about concepts with simple examples
+
+--
+- An easy way to processing a bit of datas
+
+---
+
+<small>Purposes</small>
+
+## How ?
+
+--
+- Without a great level in each technology (minimal knowledge)
+
+--
+- Vagrant for our provisionning (common for many people)
+
+--
+- Install and configure : elasticsearch, rabbitmq, prometheus...
+
+--
+- How to code with python ? (some basics)
+
+--
+- What's selenium ? How to install and use it ?
+
+--
+- SQL vs NoSQL, Document DB, Metrics DB, scaling...
 
 ---
 
 
 <small>Introduction</small>
 
-## Difference between a container and a virtual server
+## Sketch of our infrastructure
 
+.mermaid[
+<pre>
+graph TD;
+    SCRIPT/API-->ELS;
+    ELS-->ScraperVideos;
+    ScraperVideos-->RabbitMq;
+    RabbitMq-->InserterVideos;
+    InserterVideos-->ELS;
+    ELS-->ScraperComments;
+    ScraperComments-->RabbitMq;
+    RabbitMq-->InserterComments;
+    InserterComments-->ELS;
+</pre>
+]
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
