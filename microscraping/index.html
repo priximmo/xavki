@@ -133,21 +133,7 @@ background-image:url(../img/microme.png)
 
 ## Sketch of our infrastructure
 
-.mermaid[
-<pre>
-graph TD;
-    Script/API-->ELS;
-    ELS-->ScraperVideos;
-    ScraperVideos-->RabbitMq;
-    RabbitMq-->InserterVideos;
-    InserterVideos--> ELS;
-    ELS-->ScraperComments;
-    ScraperComments-->RabbitMq;
-    RabbitMq-->InserterComments;
-    InserterComments-->ELS;
-</pre>
-]
-
+![](img/infra1.png)
 
     </textarea>
 
@@ -235,6 +221,11 @@ graph TD;
         theme: "forest",
         themeCSS:
           ".tick>text { font-size:26px; }  .taskTextOutsideRight,.taskTextOutsideLeft { font-size:20px; } .titleText {font-size:30px;} .sectionTitle {font-size:20px;}",
+        gantt: {
+          fontSize: 26,
+          barHeight: 30,
+          useMaxWidth: false,
+        },
         gantt: {
           fontSize: 26,
           barHeight: 30,
